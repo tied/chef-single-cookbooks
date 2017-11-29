@@ -3,6 +3,7 @@ source 'https://supermarket.chef.io'
 
 metadata
 
-cookbook 'mc', path: 'mc'
-cookbook 'git', path: 'git'
-cookbook 'cowsay', path: 'cowsay'
+cookbook 'mc', rel: 'mc'
+cookbook 'git', rel: 'git'
+cookbook 'cowsay', rel: 'cowsay'
+# cookbook 'cowsay', github: "tied/chef-mc", rel: 'cowsay'
