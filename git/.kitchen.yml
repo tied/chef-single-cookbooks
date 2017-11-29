@@ -1,0 +1,23 @@
+---
+driver:
+  name: ec2
+  require_chef_omnibus: true
+  instance_type: t2.micro
+  associate_public_ip: true
+  interface: dns
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: amazon
+    driver:
+      image_id: ami-bf2ba8d0
+    transport:
+      username: ec2-user
+
+suites:
+  - name: default
+    run_list:
+      - recipe[mc::default]
+    attributes:
